@@ -1,0 +1,11 @@
+﻿Build started 2014/12/25 19:44:55.
+     1>Project "H:\visualstudio2014\Projects\MatrixTest\MatrixTest\MatrixTest.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         D:\development\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\visualstudio2014\Projects\MatrixTest\Debug\MatrixTest.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\visualstudio2014\Projects\MatrixTest\Debug\MatrixTest.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\visualstudio2014\Projects\MatrixTest\Debug\MatrixTest.lib" /MACHINE:X86 Debug\matrix.obj
+         Debug\matrixTest.obj
+         MatrixTest.vcxproj -> H:\visualstudio2014\Projects\MatrixTest\Debug\MatrixTest.exe
+     1>Done Building Project "H:\visualstudio2014\Projects\MatrixTest\MatrixTest\MatrixTest.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.42
