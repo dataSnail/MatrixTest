@@ -4,6 +4,12 @@
 
 using namespace std;
 
+Matrix box_mul;
+Matrix box_inver;
+Matrix box_change;
+Matrix box_plus;
+Matrix box_cut;
+
 void Matrix::readMatrix(string fileName)
 {
 	ifstream ifile(fileName.c_str(), ios::in);
@@ -66,5 +72,55 @@ void Matrix::writeMatrix(string str)
 
 void Matrix::operator+(Matrix &mt)
 {
+	double b[200][200];
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			b[i][j] = _mat[i][j] + mt._mat[i][j];
+		}
+	}
+	box_plus.col = col;
+	box_plus.row = row;
+	box_plus._mat.clear();
+	vector<double> t;
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			t.push_back(b[i][j]);
+		}
 
+		box_plus._mat.push_back(t);
+		t.clear();
+	}
+}
+
+void Matrix::operator*(Matrix &mt)
+{
+	double b[200][200];
+	for (int i = 0; i < row; i++)
+	{
+		for (int j = 0; j < mt.col; j++)
+		{
+			b[i][j] = 0;
+			for (int k = 0; k < col; k++)
+			{
+				b[i][j] += _mat[i][k] * mt._mat[k][j];
+			}
+		}
+	}
+	box_mul.col = mt.col;
+	box_mul.row = row;//行列数设置好
+	box_mul._mat.clear();
+	vector <double> t;
+	for(int i=0;i<row;i++)
+	{
+		for(int j=0;j<mt.col;j++)
+		{
+			t.push_back( b[i][j]);
+		}
+		box_mul._mat.push_back(t);//数据输入_mat量中   
+		t.clear();
+	}
 }
